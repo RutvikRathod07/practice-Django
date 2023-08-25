@@ -1,0 +1,19 @@
+{% load static %}
+{% static '' as base_url %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body >
+<h1>Hello Boy, You are in Home Page Now</h1>
+{% for stu in stu_list %}
+<h1>Name is {{stu.name}}</h1>
+<p>and age is {{stu.age}}</p>
+<p>and roll No. is {{stu.roll_no}}</p>
+<img src="{{base_url}}image{{stu.image_no}}.JPEG" width="300" height="300">>
+{# {% static 'image1.png' %} #}
+{% endfor %}
+</body>
+</html>
